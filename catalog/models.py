@@ -1,7 +1,11 @@
 from django.db import models
 
 # Create your models here.
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> admin_site
 # To generate URLS by reversing URL patterns
 #Instead of hardcoding URLs in the app, REVERSE allows you to create URLs based on 
 #the name of the view and any arguments required for the URL pattern
