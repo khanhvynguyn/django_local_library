@@ -22,6 +22,10 @@ urlpatterns = [
 ]
 
 # Use include() to add paths from the catalog application
+"""django.urls.include(): it splits the URL string at the designated end 
+    character and sends the remaining substring to the included URLconf 
+    modul for further process
+"""
 from django.urls import include
 
 urlpatterns += [
