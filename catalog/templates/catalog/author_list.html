@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Authors List</h1>
+    {% if author_list %}
+        <ul>
+            {% for author in author_list %}
+            <!-- list of items-->
+            <li>
+            <!-- create a list of item for each book that shows both title and the author-->
+            <a href="{{ author.get_absolute_url }}">{{ author.first_name }} {{ author.last_name}} </a>
+            </li>
+            <!-- tag empty to define what happens if the books list is empty
+            % empty %}
+            pThere are no books in the library -->
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>There are no authors in the list.</p>
+        {% endif %}
+    {% endblock %}
+    

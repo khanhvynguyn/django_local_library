@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Book List</h1>
+  <!-- if, else, endif template tags to check whether the book_list has been defined and is not empty
+   if book_list is empty, then the else clause displays text explaining that there are no books to list-->
+  {% if book_list %}
+    <ul>
+      {% for book in book_list %}
+      <!-- list of items-->
+      <li>
+        <!-- create a list of item for each book that shows both title and the author-->
+        <a href="{{ book.get_absolute_url }}">{{ book.title }}</a>
+        ({{book.author}})
+      </li>
+      <!-- tag empty to define what happens if the books list is empty
+      % empty %}
+        pThere are no books in the library -->
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %}
+{% endblock %}
